@@ -1,0 +1,102 @@
+/* Re-init agents */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+/* Re-init agents */
+/* ROOTS */
+:root {
+  /*color*/
+  --blue-color: #0f56e6;
+  --light-blue-color: #1d9dd9;
+  --turquoise-color: #1acdc4;
+  --white-color: #ffffff;
+  /*font*/
+  --main-font-family: Arial, system-ui, -apple-system, sans-serif;
+  --title-font-family: "Capriola", system-ui, -apple-system, sans-serif;
+}
+/* END ROOTS */
+@font-face {
+  font-display: swap;
+  font-family: "Capriola";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/Capriola-Regular.woff2") format("woff2");
+}
+main {
+  flex: 1;
+  margin-top: 70px;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+.padding {
+  padding-inline: 50px;
+}
+body {
+  background-color: #effafd;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font-family);
+}
+.main-font {
+  font-family: var(--main-font-family);
+}
+
+@media (max-width: 768px) {
+  .padding {
+    padding-inline: 20px;
+  }
+}

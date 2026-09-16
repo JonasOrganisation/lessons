@@ -1,0 +1,117 @@
+header {
+  max-width: 1400px;
+  position: fixed;
+  background-color: var(--white-color);
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  width: 100%;
+}
+header::before {
+  bottom: 0;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: -1;
+  background: inherit;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav li::marker {
+  content: none;
+}
+nav li a {
+  color: var(--blue-color);
+}
+nav li a:hover,
+nav li a:focus {
+  color: var(--light-blue-color);
+  text-decoration-color: var(--light-blue-color);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  font-weight: 600px;
+}
+button.hamburger {
+  border: 0 none;
+}
+.hamburger {
+  background: inherit;
+  display: none;
+  visibility: hidden;
+  flex-direction: column;
+  height: 40px;
+  width: 2em;
+  cursor: pointer;
+}
+
+.hamburger div:not(:first-child) {
+  margin-top: 8px;
+}
+
+.hamburger div {
+  position: relative;
+  width: 2rem;
+  height: 4px;
+  border-radius: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--blue-color);
+}
+.hamburger.active .top-bun {
+  transform: rotate(-45deg);
+  margin-top: 11px;
+}
+
+.hamburger.active .meat {
+  transform: rotate(45deg);
+  margin-top: -4px;
+}
+
+.hamburger.active .bottom-bun {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    visibility: visible;
+    justify-content: center;
+  }
+  .header-wrapper {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    opacity: 0;
+    top: 100%;
+    visibility: hidden;
+    z-index: 10;
+    padding: 20px;
+  }
+  .header-wrapper.is-open {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
