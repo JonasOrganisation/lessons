@@ -63,13 +63,14 @@ ol {
   src: url("assets/fonts/Capriola-Regular.woff2") format("woff2");
 }
 main {
-  flex: 1;
+  position: relative;
   margin-top: 70px;
 }
 
 html,
 body {
   min-height: 100%;
+  overflow: hidden;
 }
 .padding {
   padding-inline: 50px;
