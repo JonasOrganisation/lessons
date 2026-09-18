@@ -1,8 +1,49 @@
 footer {
   min-height: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(180deg, #1d9dd9 0%, #0f56e6 100%);
+  color: var(--white-color);
+  padding: 10px 0;
+  gap: 10px;
+  position: relative;
 }
+.linkedin {
+  transition: all 0.2s ease-in-out;
+}
+
+.linkedin::after {
+  content: url(data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%2230%22%20height%3D%2230%22%20rx%3D%2215%22%20fill%3D%22white%22%2F%3E%3Cpath%20d%3D%22M8.5293%208.72652C8.5293%208.24352%208.6983%207.84552%209.0363%207.53152C9.3743%207.21752%209.8133%207.06152%2010.3533%207.06152C10.8843%207.06152%2011.3133%207.21552%2011.6423%207.52452C11.9803%207.84252%2012.1493%208.25852%2012.1493%208.76952C12.1493%209.23252%2011.9853%209.61952%2011.6563%209.92752C11.3193%2010.2465%2010.8753%2010.4055%2010.3243%2010.4055H10.3103C9.7793%2010.4055%209.3503%2010.2465%209.0213%209.92752C8.6933%209.60952%208.5293%209.20852%208.5293%208.72652ZM8.7173%2021.3955V11.7235H11.9323V21.3955H8.7173ZM13.7123%2021.3955H16.9273V15.9955C16.9273%2015.6565%2016.9653%2015.3955%2017.0433%2015.2125C17.1757%2014.8882%2017.3871%2014.6022%2017.6583%2014.3805C17.9333%2014.1535%2018.2783%2014.0405%2018.6933%2014.0405C19.7743%2014.0405%2020.3153%2014.7685%2020.3153%2016.2265V21.3955H23.5293V15.8495C23.5293%2014.4215%2023.1913%2013.3375%2022.5153%2012.5995C21.8403%2011.8605%2020.9473%2011.4915%2019.8373%2011.4915C18.5923%2011.4915%2017.6223%2012.0275%2016.9273%2013.0985V13.1285H16.9123L16.9273%2013.0985V11.7245H13.7123C13.7323%2012.0335%2013.7423%2012.9945%2013.7423%2014.6055C13.7423%2016.2175%2013.7323%2018.4815%2013.7123%2021.3955Z%22%20fill%3D%22%230F56E6%22%2F%3E%3C%2Fsvg%3E);
+  display: block;
+}
+.linkedin:hover,
+.linkedin:focus {
+  transform: scale(1.2);
+}
+.footer_anchor {
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid white;
+  transition: all 0.2s ease-in-out;
+  transform: rotate(315deg);
+  position: absolute;
+  right: 10px;
+}
+.footer_anchor:hover,
+.footer_anchor:focus {
+  background-color: var(--white-color);
+  transform: rotate(315deg) scale(1.2);
+}
+.footer_anchor img {
+  filter: invert(1);
+}
+.footer_anchor:hover img,
+.footer_anchor:focus img {
+  filter: invert(35%) sepia(60%) saturate(6698%) hue-rotate(215deg)
+    brightness(90%) contrast(100%);
+}
+
 @media (max-width: 768px) {
 }
