@@ -10,10 +10,10 @@ class SiteHeader extends HTMLElement {
     <nav>
       <ul>
         <li>
-          <a href="/index.html">Accueil</a>
+          <a href="./index.html">Accueil</a>
         </li>
         <li>
-          <a href="/algo.html">Mini-algorithmes</a>
+          <a href="./algo.html">Mini-algorithmes</a>
         </li>
       </ul>
     </nav>
