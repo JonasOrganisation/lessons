@@ -2,33 +2,7 @@
   list-style: none;
   padding-left: 0;
 }
-section {
-  display: flex;
-  flex-direction: column;
-  margin: 50px 0;
-  gap: 20px;
-}
-article {
-  background: lab(100% 0 0);
-  border: 1px solid lab(92.115% 0.568301 1.79822);
-  border-radius: 13px;
-  padding: 20px;
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 40px auto;
-}
-article ul {
-  list-style: disc;
-  list-style-position: inside;
-  gap: 5px;
-  display: flex;
-  flex-direction: column;
-}
-article ul li::marker {
-  color: var(--blue-color);
-}
+
 .presentation {
   display: flex;
   justify-content: space-between;
@@ -41,32 +15,6 @@ article ul li::marker {
   font-weight: bold;
   font-family: var(--blue-color);
 }
-.external-link {
-  text-decoration: none;
-  color: var(--blue-color);
-  font-weight: bold;
-  background-color: #1acdc4;
-  padding: 10px 15px;
-  transition: background-color 0.2s ease-in-out;
-  border-radius: 22px;
-}
-.external-link:hover,
-.external-link:focus {
-  background-color: #0f56e6;
-  color: #1acdc4;
-}
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+
 @media (max-width: 768px) {
-  section {
-    margin: 25px 0;
-    gap: 10px;
-  }
-  article {
-    padding: 10px;
-    margin: 20px auto;
-  }
 }

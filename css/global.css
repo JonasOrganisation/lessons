@@ -21,7 +21,9 @@ svg {
   display: block;
   max-width: 100%;
 }
-
+button {
+  border: none;
+}
 button,
 input,
 textarea,
@@ -33,7 +35,8 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+pre {
   margin: 0;
 }
 
@@ -65,12 +68,15 @@ ol {
 main {
   position: relative;
   margin-top: 70px;
+  flex-basis: 0%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  z-index: 1;
 }
 
 html,
 body {
   min-height: 100%;
-  overflow: hidden;
 }
 .padding {
   padding-inline: 50px;
@@ -83,6 +89,7 @@ body {
   margin-inline: auto;
   display: flex;
   flex-direction: column;
+  overflow: hidden auto;
 }
 h1,
 h2,
@@ -92,12 +99,85 @@ h5,
 h6 {
   font-family: var(--title-font-family);
 }
+
 .main-font {
   font-family: var(--main-font-family);
 }
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+  gap: 20px;
+}
 
+.external-link {
+  text-decoration: none;
+  color: var(--blue-color);
+  background-color: #1acdc4;
+  padding: 10px 15px;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 22px;
+  font-weight: bold;
+}
+.external-link:hover,
+.external-link:focus {
+  background-color: #0f56e6;
+  color: #1acdc4;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+article {
+  background: lab(100% 0 0);
+  border: 1px solid lab(92.115% 0.568301 1.79822);
+  border-radius: 13px;
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+}
+article ul {
+  list-style: disc;
+  list-style-position: inside;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+article ul li::marker {
+  color: var(--blue-color);
+}
+pre {
+  background-color: #1e1e1e;
+  color: #bfbfbf;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+pre code {
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: pre;
+  display: flex;
+  width: 100%;
+}
 @media (max-width: 768px) {
   .padding {
     padding-inline: 20px;
+  }
+  section {
+    margin: 25px 0;
+    gap: 10px;
+  }
+  article {
+    padding: 10px;
+    margin: 20px auto;
   }
 }
