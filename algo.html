@@ -326,7 +326,7 @@ function searchVoyelle(mot) {
     };
 }
 </code></pre>
-            <button class="spoiler">Afficher le code</button>
+            <button class="spoiler">Cliquer pour afficher le code</button>
           </div>
 
           <script>
@@ -377,15 +377,17 @@ function searchVoyelle(mot) {
           <script>
             {
               const article = document.currentScript.closest("article");
+              const spoiler = article.querySelector(".hidden-spoil");
               const boutonReveal = article.querySelector(".spoiler");
               const code = article.querySelector("pre");
 
-              boutonReveal.addEventListener("click", function () {
+              spoiler.addEventListener("click", function () {
                 code.classList.toggle("reveal");
+
+                boutonReveal.textContent = code.classList.contains("reveal")
+                  ? "Cliquer pour cacher le code"
+                  : "Cliquer pour afficher le code";
               });
-              boutonReveal.textContent = code.classList.contains("reveal")
-                ? "Cacher le code"
-                : "Afficher le code";
             }
           </script>
         </article>
@@ -417,7 +419,7 @@ function motLePlusLong(phrase) {
   return result;
 }
   </code></pre>
-            <button class="spoiler">Afficher le code</button>
+            <button class="spoiler">Cliquer pour afficher le code</button>
           </div>
           <script>
             const articleLongueur =
@@ -453,14 +455,16 @@ function motLePlusLong(phrase) {
           <script>
             {
               const article = document.currentScript.closest("article");
+              const spoiler = article.querySelector(".hidden-spoil");
               const boutonReveal = article.querySelector(".spoiler");
               const code = article.querySelector("pre");
 
-              boutonReveal.addEventListener("click", function () {
+              spoiler.addEventListener("click", function () {
                 code.classList.toggle("reveal");
+
                 boutonReveal.textContent = code.classList.contains("reveal")
-                  ? "Cacher le code"
-                  : "Afficher le code";
+                  ? "Cliquer pour cacher le code"
+                  : "Cliquer pour afficher le code";
               });
             }
           </script>

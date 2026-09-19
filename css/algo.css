@@ -10,6 +10,7 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column-reverse;
+  cursor: pointer;
 }
 
 .spoiler {
@@ -18,11 +19,13 @@
   border-radius: 22px 22px 0 0;
   font-weight: bold;
   border: 1px solid #1e1e1e;
-  cursor: pointer;
 }
-.spoiler:hover {
-  background-color: #1e1e1e;
+.hidden-spoil:hover .spoiler,
+.spoiler:focus {
+  background-color: var(--light-blue-color);
   color: white;
+  cursor: pointer;
+  border-bottom: 1px solid var(--light-blue-color);
 }
 .exercice pre {
   border-radius: 0 8px 8px 8px;
