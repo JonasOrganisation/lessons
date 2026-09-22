@@ -34,6 +34,7 @@
 .exercice pre code {
   filter: blur(5px);
   transition: filter 0.3s ease;
+  overflow: auto;
 }
 .exercice pre.reveal code {
   filter: none;
