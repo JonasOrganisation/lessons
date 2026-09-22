@@ -201,5 +201,12 @@ details ul {
   .nav-subitem {
     align-items: flex-end;
     margin-top: 10px;
+    gap: 10px;
+  }
+  .nav-subitem li a {
+    color: #08090a;
+    font-size: 1.1rem;
+    letter-spacing: -0.03em;
+    line-height: 1.5em;
   }
 }
