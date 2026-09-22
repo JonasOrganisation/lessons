@@ -167,7 +167,26 @@ pre code {
   white-space: pre;
   display: flex;
   width: 100%;
+  flex-direction: column;
 }
+.memo table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.memo th,
+.memo td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: left;
+  vertical-align: top;
+}
+.memo th {
+  background: #f2f2f2;
+}
+.memo td code {
+  white-space: pre-wrap;
+}
+
 @media (max-width: 768px) {
   .padding {
     padding-inline: 20px;
@@ -179,5 +198,13 @@ pre code {
   article {
     padding: 10px;
     margin: 20px auto;
+  }
+  .memo table {
+    font-size: 0.9rem;
+  }
+
+  .memo th,
+  .memo td {
+    padding: 8px;
   }
 }

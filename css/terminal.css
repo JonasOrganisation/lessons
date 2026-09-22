@@ -1,0 +1,40 @@
+.terminal {
+  background: lab(100% 0 0);
+  border: 1px solid lab(92.115% 0.568301 1.79822);
+  border-radius: 13px;
+  padding: 20px;
+}
+.warning {
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border-left: 5px solid #b00020;
+  background: #fff1f1;
+  color: #8a0018;
+  font-weight: 700;
+}
+.danger-code {
+  color: #ff6b6b;
+  font-weight: 700;
+}
+.memo tbody .red-flag td,
+.memo tbody .red-flag code {
+  color: #b00020;
+  font-weight: 700;
+}
+.memo tbody tr.red-flag {
+  background: #fff1f1;
+}
+@media (max-width: 760px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  tr {
+    padding: 8px 0;
+    border-bottom: 1px solid #dbe1ea;
+  }
+}
