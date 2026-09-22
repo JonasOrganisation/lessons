@@ -7,18 +7,42 @@ class SiteHeader extends HTMLElement {
   </a>
 
   <div class="header-wrapper">
-    <nav>
-      <ul>
-        <li>
-          <a href="./terminal.html">Terminal</a>
-        </li>
-        <li>
-          <a href="./git.html">Git</a>
-        </li>
-        <li>
-          <a href="./algo.html">Mini-algorithmes</a>
-        </li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <a href="./git.html">Git</a>
+          </li>
+
+          <li>
+            <details name="nav-menu">
+              <summary>Terminal</summary>
+
+              <ul class="nav-subitem">
+                <li>
+                  <a href="./terminal.html#hero">Introduction</a>
+                </li>
+                <li>
+                  <a href="./terminal.html#exemples">Actions</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          <li>
+            <details name="nav-menu">
+              <summary>Mini-algorithmes</summary>
+
+              <ul class="nav-subitem">
+                <li>
+                  <a href="./algo.html#hero">Introduction</a>
+                </li>
+                <li>
+                  <a href="./algo.html#exemples">Exemples</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
     </nav>
   </div>
 

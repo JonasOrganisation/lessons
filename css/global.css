@@ -45,6 +45,10 @@ ol {
   margin: 0;
   padding: 0;
 }
+/*desactivation marker des navigateur */
+summary::-webkit-details-marker {
+  display: none !important;
+}
 /* Re-init agents */
 /* ROOTS */
 :root {
@@ -63,7 +67,7 @@ ol {
   font-family: "Capriola";
   font-style: normal;
   font-weight: 400;
-  src: url("assets/fonts/Capriola-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/Capriola/Capriola-Regular.ttf") format("woff2");
 }
 main {
   position: relative;
@@ -99,7 +103,13 @@ h5,
 h6 {
   font-family: var(--title-font-family);
 }
+/* ANCHOR */
+/* correspond à la taille de la nav + 20/30*/
+:target {
+  scroll-margin-top: 75px;
+}
 
+/* END ANCHOR */
 .main-font {
   font-family: var(--main-font-family);
 }
@@ -138,7 +148,7 @@ article {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
+  box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.08);
   width: 100%;
 }
 article ul {
