@@ -196,6 +196,7 @@ pre code {
 .memo td code {
   white-space: pre-wrap;
 }
+
 /* Animation seulement si l’utilisateur n’a PAS réduit les animations */
 @media (prefers-reduced-motion: no-preference) {
   .fade-up,
