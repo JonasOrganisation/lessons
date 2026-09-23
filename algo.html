@@ -29,6 +29,7 @@
     <!-- SCRIPTS -->
     <script src="./assets/js/hamburger.js"></script>
     <script src="./assets/js/nav-details.js"></script>
+    <script src="./assets/js/animation.js"></script>
     <script src="./components/header.js"></script>
     <script src="./components/footer.js"></script>
 
@@ -42,14 +43,14 @@
   <body>
     <site-header></site-header>
     <main class="padding main-font">
-      <section class="hero" id="hero">
+      <section class="hero fade-down" id="hero">
         <h1>Ici des scripts vont se lancer</h1>
         <p>Recueil des commandes et test des mini-algorithmes</p>
       </section>
       <section class="memo" id="table">
         <h2>Mémo — Manipuler les tableaux en JavaScript</h2>
 
-        <article>
+        <article class="fade-up">
           <h3>Créer un tableau</h3>
 
           <pre><code>
@@ -57,7 +58,7 @@ const fruits = ["pomme", "banane", "orange"];
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Transformer une chaîne de caractères en tableau — split()</h3>
 
           <pre><code>
@@ -73,7 +74,7 @@ console.log(mots);
           <p><code>split(" ")</code> coupe la chaîne à chaque espace.</p>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Transformer un tableau en texte — join()</h3>
 
           <pre><code>
@@ -87,7 +88,7 @@ console.log(phrase);
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Ajouter un élément à la fin — push()</h3>
 
           <pre><code>
@@ -101,7 +102,7 @@ console.log(fruits);
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Supprimer le dernier élément — pop()</h3>
 
           <pre><code>
@@ -115,7 +116,7 @@ console.log(fruits);
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Ajouter un élément au début — unshift()</h3>
 
           <pre><code>
@@ -129,7 +130,7 @@ console.log(fruits);
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Supprimer le premier élément — shift()</h3>
 
           <pre><code>
@@ -143,7 +144,7 @@ console.log(fruits);
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Connaître le nombre d'éléments — length</h3>
 
           <pre><code>
@@ -155,7 +156,7 @@ console.log(fruits.length);
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Récupérer un élément</h3>
 
           <pre><code>
@@ -171,7 +172,7 @@ console.log(fruits[1]);
           <p>Les tableaux commencent à l'index <code>0</code>.</p>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Parcourir un tableau — for...of</h3>
 
           <pre><code>
@@ -183,7 +184,7 @@ for (const fruit of fruits) {
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Vérifier si une valeur existe — includes()</h3>
 
           <pre><code>
@@ -197,7 +198,7 @@ console.log(fruits.includes("fraise"));
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Trouver la position d'un élément — indexOf()</h3>
 
           <pre><code>
@@ -209,7 +210,7 @@ console.log(fruits.indexOf("banane"));
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Extraire une partie du tableau — slice()</h3>
 
           <pre><code>
@@ -223,7 +224,7 @@ console.log(selection);
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Supprimer ou ajouter des éléments — splice()</h3>
 
           <pre><code>
@@ -243,7 +244,7 @@ console.log(fruits);
           </p>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Créer un nouveau tableau avec map()</h3>
 
           <pre><code>
@@ -259,7 +260,7 @@ console.log(doubles);
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Filtrer un tableau — filter()</h3>
 
           <pre><code>
@@ -275,7 +276,7 @@ console.log(grands);
     </code></pre>
         </article>
 
-        <article>
+        <article class="fade-up">
           <h3>Trouver un élément — find()</h3>
 
           <pre><code>
@@ -291,7 +292,7 @@ console.log(resultat);
     </code></pre>
         </article>
       </section>
-      <section class="exo-algo" id="exemples">
+      <section class="exo-algo fade-in" id="exemples">
         <article class="exercice exercice-voyelles">
           <h2>Rechercher les voyelles</h2>
 
@@ -394,7 +395,7 @@ function searchVoyelle(mot) {
           </script>
         </article>
 
-        <article class="exercice exercice-longueur">
+        <article class="exercice exercice-longueur zoom-in">
           <h2>Trouver le mot le plus long</h2>
 
           <label>
