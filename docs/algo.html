@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link rel="canonical" href="https://jonasorganisation.github.io/lessons/" />
+    <!-- SEO / SHARE -->
+    <title>Mini-algorithmes</title>
+    <meta
+      name="description"
+      content="Cette page est la page ou je test des mini-algorithmes"
+    />
+    <meta property="og:title" content="Page algorithme" />
+    <meta
+      property="og:description"
+      content="Cette page est la page ou je test des mini-algorithmes"
+    />
+    <meta
+      property="og:url"
+      content="https://jonasorganisation.github.io/lessons/algo.html"
+    />
+    <meta
+      property="og:image"
+      content="https://jonasorganisation.github.io/lessons/assets/images/logo.png"
+    />
+
+    <!-- END SEO / SHARE -->
+    <!-- SCRIPTS -->
+    <script src="./assets/js/hamburger.js"></script>
+    <script src="./assets/js/nav-details.js"></script>
+    <script src="./assets/js/animation.js"></script>
+    <script src="./assets/js/pagefind.js"></script>
+
+    <!-- components -->
+    <script src="./components/header.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!--END  SCRIPTS -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/algo.css" />
+  </head>
+
+  <body>
+    <site-header></site-header>
+    <main class="padding main-font">
+      <section class="hero fade-down" id="hero">
+        <h1>Ici des scripts vont se lancer</h1>
+        <p>Recueil des commandes et test des mini-algorithmes</p>
+      </section>
+      <section class="memo" id="table">
+        <h2 id="memo-manipuler-les-tableaux-en-javascript">Mémo — Manipuler les tableaux en JavaScript</h2>
+
+        <article class="fade-up">
+          <h3 id="creer-un-tableau">Créer un tableau</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane", "orange"];
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="transformer-une-chaine-de-caracteres-en-tableau-split">Transformer une chaîne de caractères en tableau — split()</h3>
+
+          <pre><code>
+const phrase = "bonjour tout le monde";
+
+const mots = phrase.split(" ");
+
+console.log(mots);
+
+// ["bonjour", "tout", "le", "monde"]
+    </code></pre>
+
+          <p><code>split(" ")</code> coupe la chaîne à chaque espace.</p>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="transformer-un-tableau-en-texte-join">Transformer un tableau en texte — join()</h3>
+
+          <pre><code>
+const mots = ["bonjour", "tout", "le", "monde"];
+
+const phrase = mots.join(" ");
+
+console.log(phrase);
+
+// "bonjour tout le monde"
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="ajouter-un-element-a-la-fin-push">Ajouter un élément à la fin — push()</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane"];
+
+fruits.push("orange");
+
+console.log(fruits);
+
+// ["pomme", "banane", "orange"]
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="supprimer-le-dernier-element-pop">Supprimer le dernier élément — pop()</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane", "orange"];
+
+fruits.pop();
+
+console.log(fruits);
+
+// ["pomme", "banane"]
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="ajouter-un-element-au-debut-unshift">Ajouter un élément au début — unshift()</h3>
+
+          <pre><code>
+const fruits = ["banane", "orange"];
+
+fruits.unshift("pomme");
+
+console.log(fruits);
+
+// ["pomme", "banane", "orange"]
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="supprimer-le-premier-element-shift">Supprimer le premier élément — shift()</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane", "orange"];
+
+fruits.shift();
+
+console.log(fruits);
+
+// ["banane", "orange"]
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="connaitre-le-nombre-d-elements-length">Connaître le nombre d'éléments — length</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane", "orange"];
+
+console.log(fruits.length);
+
+// 3
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="recuperer-un-element">Récupérer un élément</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane", "orange"];
+
+console.log(fruits[0]);
+// "pomme"
+
+console.log(fruits[1]);
+// "banane"
+    </code></pre>
+
+          <p>Les tableaux commencent à l'index <code>0</code>.</p>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="parcourir-un-tableau-for-of">Parcourir un tableau — for...of</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane", "orange"];
+
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="verifier-si-une-valeur-existe-includes">Vérifier si une valeur existe — includes()</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane", "orange"];
+
+console.log(fruits.includes("banane"));
+// true
+
+console.log(fruits.includes("fraise"));
+// false
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="trouver-la-position-d-un-element-indexof">Trouver la position d'un élément — indexOf()</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane", "orange"];
+
+console.log(fruits.indexOf("banane"));
+
+// 1
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="extraire-une-partie-du-tableau-slice">Extraire une partie du tableau — slice()</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane", "orange", "fraise"];
+
+const selection = fruits.slice(1, 3);
+
+console.log(selection);
+
+// ["banane", "orange"]
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="supprimer-ou-ajouter-des-elements-splice">Supprimer ou ajouter des éléments — splice()</h3>
+
+          <pre><code>
+const fruits = ["pomme", "banane", "orange"];
+
+fruits.splice(1, 1);
+
+console.log(fruits);
+
+// ["pomme", "orange"]
+    </code></pre>
+
+          <p>
+            Ici :
+            <code>1</code> = position de départ, <code>1</code> = nombre
+            d'éléments à supprimer.
+          </p>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="creer-un-nouveau-tableau-avec-map">Créer un nouveau tableau avec map()</h3>
+
+          <pre><code>
+const nombres = [1, 2, 3];
+
+const doubles = nombres.map(function (nombre) {
+  return nombre * 2;
+});
+
+console.log(doubles);
+
+// [2, 4, 6]
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="filtrer-un-tableau-filter">Filtrer un tableau — filter()</h3>
+
+          <pre><code>
+const nombres = [1, 2, 3, 4, 5];
+
+const grands = nombres.filter(function (nombre) {
+  return nombre > 3;
+});
+
+console.log(grands);
+
+// [4, 5]
+    </code></pre>
+        </article>
+
+        <article class="fade-up">
+          <h3 id="trouver-un-element-find">Trouver un élément — find()</h3>
+
+          <pre><code>
+const nombres = [2, 5, 8, 12];
+
+const resultat = nombres.find(function (nombre) {
+  return nombre > 6;
+});
+
+console.log(resultat);
+
+// 8
+    </code></pre>
+        </article>
+      </section>
+      <section class="exo-algo fade-in" id="exemples">
+        <article class="exercice exercice-voyelles">
+          <h2 id="rechercher-les-voyelles">Rechercher les voyelles</h2>
+
+          <label>
+            Entrez un mot :
+            <input type="text" class="mot" autocomplete="off" />
+          </label>
+
+          <p class="resultat"></p>
+          <div class="hidden-spoil">
+            <pre class="precode"><code>
+            
+function searchVoyelle(mot) {
+    let voyellesFind = [];
+    let compteur = 0;
+
+    for (const lettre of mot) {
+        if (
+            lettre === "a" ||
+            lettre === "e" ||
+            lettre === "i" ||
+            lettre === "o" ||
+            lettre === "u" ||
+            lettre === "y"
+        ) {
+            compteur++;
+            voyellesFind.push(lettre);
+        }
+    }
+
+    return {
+    compteur: compteur,
+    voyelles: voyellesFind
+    };
+}
+</code></pre>
+            <button class="spoiler">Cliquer pour afficher le code</button>
+          </div>
+
+          <script>
+            const articleVoyelles =
+              document.querySelector(".exercice-voyelles");
+
+            const inputMot = articleVoyelles.querySelector(".mot");
+            const resultatVoyelles = articleVoyelles.querySelector(".resultat");
+
+            function searchVoyelle(mot) {
+              let voyellesFind = [];
+              let compteur = 0;
+
+              for (const lettre of mot) {
+                if (
+                  lettre === "a" ||
+                  lettre === "e" ||
+                  lettre === "i" ||
+                  lettre === "o" ||
+                  lettre === "u" ||
+                  lettre === "y"
+                ) {
+                  compteur++;
+                  voyellesFind.push(lettre);
+                }
+              }
+
+              return {
+                compteur: compteur,
+                voyelles: voyellesFind,
+              };
+            }
+
+            inputMot.addEventListener("input", function () {
+              inputMot.value = inputMot.value.replace(/\s/g, "");
+
+              const mot = inputMot.value.toLowerCase();
+
+              const resultat = searchVoyelle(mot);
+
+              resultatVoyelles.textContent =
+                "Voyelles : " +
+                resultat.voyelles.join(", ") +
+                " — Nombre : " +
+                resultat.compteur;
+            });
+          </script>
+          <script>
+            {
+              const article = document.currentScript.closest("article");
+              const spoiler = article.querySelector(".hidden-spoil");
+              const boutonReveal = article.querySelector(".spoiler");
+              const code = article.querySelector("pre");
+
+              spoiler.addEventListener("click", function () {
+                code.classList.toggle("reveal");
+
+                boutonReveal.textContent = code.classList.contains("reveal")
+                  ? "Cliquer pour cacher le code"
+                  : "Cliquer pour afficher le code";
+              });
+            }
+          </script>
+        </article>
+
+        <article class="exercice exercice-longueur zoom-in">
+          <h2 id="trouver-le-mot-le-plus-long">Trouver le mot le plus long</h2>
+
+          <label>
+            Entrez une phrase :
+            <input type="text" class="phrase" autocomplete="off" />
+          </label>
+
+          <p class="resultat"></p>
+          <div class="hidden-spoil">
+            <pre><code>
+function motLePlusLong(phrase) {
+  const mots = phrase.split(" ");
+
+  let length = 0;
+  let result = "";
+
+  for (const mot of mots) {
+    if (mot.length > length) {
+      length = mot.length;
+      result = mot;
+    }
+  }
+
+  return result;
+}
+  </code></pre>
+            <button class="spoiler">Cliquer pour afficher le code</button>
+          </div>
+          <script>
+            const articleLongueur =
+              document.querySelector(".exercice-longueur");
+
+            const inputPhrase = articleLongueur.querySelector(".phrase");
+            const resultatLongueur = articleLongueur.querySelector(".resultat");
+
+            function motLePlusLong(phrase) {
+              const mots = phrase.split(" ");
+
+              let length = 0;
+              let result = "";
+
+              for (const mot of mots) {
+                if (mot.length > length) {
+                  length = mot.length;
+                  result = mot;
+                }
+              }
+
+              return result;
+            }
+
+            inputPhrase.addEventListener("input", function () {
+              const phrase = inputPhrase.value;
+
+              const mot = motLePlusLong(phrase);
+
+              resultatLongueur.textContent = "Mot le plus long : " + mot;
+            });
+          </script>
+          <script>
+            {
+              const article = document.currentScript.closest("article");
+              const spoiler = article.querySelector(".hidden-spoil");
+              const boutonReveal = article.querySelector(".spoiler");
+              const code = article.querySelector("pre");
+
+              spoiler.addEventListener("click", function () {
+                code.classList.toggle("reveal");
+
+                boutonReveal.textContent = code.classList.contains("reveal")
+                  ? "Cliquer pour cacher le code"
+                  : "Cliquer pour afficher le code";
+              });
+            }
+          </script>
+        </article>
+      </section>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

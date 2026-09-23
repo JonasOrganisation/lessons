@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link rel="canonical" href="https://jonasorganisation.github.io/lessons/" />
+    <!-- SEO / SHARE -->
+    <title>Mémo terminal</title>
+    <meta
+      name="description"
+      content="Cette page est une page 'memo pour les commande temrinal'."
+    />
+    <meta property="og:title" content="Page terminal" />
+    <meta
+      property="og:description"
+      content="Cette page est une page 'memo pour les commande temrinal'."
+    />
+    <meta
+      property="og:url"
+      content="https://jonasorganisation.github.io/lessons/terminal.html"
+    />
+    <meta
+      property="og:image"
+      content="https://jonasorganisation.github.io/lessons/assets/images/logo.png"
+    />
+
+    <!-- END SEO / SHARE -->
+    <!-- SCRIPTS -->
+    <script src="./assets/js/hamburger.js"></script>
+    <script src="./assets/js/nav-details.js"></script>
+    <script src="./assets/js/animation.js"></script>
+    <script src="./components/header.js"></script>
+    <script src="./components/footer.js"></script>
+    <script src="./assets/js/pagefind.js"></script>
+    <!--END  SCRIPTS -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/terminal.css" />
+  </head>
+
+  <body>
+    <site-header></site-header>
+    <main class="padding main-font">
+      <section class="hero fade-down" id="hero">
+        <h1>Mémo - Commandes Terminal</h1>
+        <p>Raccourcis essentiels et exemples pratiques</p>
+      </section>
+
+      <section class="memo terminal" id="action">
+        <h2 id="actions">Actions</h2>
+        <table>
+          <thead>
+            <tr class="fade-in">
+              <th>Action</th>
+              <th>Commande</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="fade-in">
+              <td>Savoir où je suis</td>
+              <td><code>pwd</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Lister les fichiers</td>
+              <td><code>ls</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Lister avec détails</td>
+              <td><code>ls -l</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Voir les fichiers cachés</td>
+              <td><code>ls -a</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Détails + fichiers cachés</td>
+              <td><code>ls -la</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Entrer dans un dossier</td>
+              <td><code>cd dossier</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Revenir au dossier parent</td>
+              <td><code>cd ..</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Revenir au dossier personnel</td>
+              <td><code>cd ~</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Aller à la racine</td>
+              <td><code>cd /</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Créer un dossier</td>
+              <td><code>mkdir dossier</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Créer plusieurs dossiers</td>
+              <td><code>mkdir dossier1 dossier2</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Créer une arborescence</td>
+              <td><code>mkdir -p dossier/sous-dossier</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Créer un fichier</td>
+              <td><code>touch fichier.txt</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Copier un fichier</td>
+              <td><code>cp fichier.txt copie.txt</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Copier un dossier</td>
+              <td><code>cp -r dossier copie-dossier</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Déplacer un fichier</td>
+              <td><code>mv fichier.txt dossier/</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Renommer un fichier</td>
+              <td><code>mv ancien.txt nouveau.txt</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Supprimer un fichier</td>
+              <td><code>rm fichier.txt</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Lire un fichier</td>
+              <td><code>cat fichier.txt</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Lire progressivement</td>
+              <td><code>less fichier.txt</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Rechercher dans un fichier</td>
+              <td><code>grep "texte" fichier.txt</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Recherche sans casse</td>
+              <td><code>grep -i "texte" fichier.txt</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Recherche récursive</td>
+              <td><code>grep -r "texte" dossier/</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Enchaîner des commandes</td>
+              <td><code>commande1 &amp;&amp; commande2</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Filtrer la sortie d’une commande</td>
+              <td><code>commande | grep "texte"</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Nettoyer le Terminal</td>
+              <td><code>clear</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Voir l’historique</td>
+              <td><code>history</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Arrêter une commande</td>
+              <td><code>Ctrl + C</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Nettoyer l’écran</td>
+              <td><code>Ctrl + L</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Commande précédente</td>
+              <td><code>↑</code></td>
+            </tr>
+
+            <tr class="fade-in">
+              <td>Commande suivante</td>
+              <td><code>↓</code></td>
+            </tr>
+            <tr class="red-flag zoom-in">
+              <td>⚠ Supprimer un dossier - ATTENTION</td>
+              <td><code>rm -r dossier</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="warning zoom-in">
+          ⚠ <code>rm -r</code> supprime un dossier et tout son contenu sans
+          passer par la corbeille.
+        </p>
+      </section>
+      <section class="memo terminal fade-down" id="exemples">
+        <h2 id="exemples">Exemples</h2>
+        <pre class="zoom-in"><code># Voir où je suis
+pwd
+
+# Voir tous les fichiers
+ls -la
+
+# Aller dans un projet
+cd mon-projet
+
+# Revenir au dossier précédent
+cd ..
+
+# Créer un projet
+mkdir mon-projet
+
+# Créer une arborescence
+mkdir -p mon-projet/assets/images
+
+# Créer plusieurs fichiers
+touch index.html style.css script.js
+
+# Copier un fichier
+cp index.html index-copy.html
+
+# Copier un dossier
+cp -r assets assets-copy
+
+# Déplacer un fichier
+mv style.css assets/
+
+# Renommer un fichier
+mv script.js main.js
+
+# Supprimer un fichier
+rm index-copy.html
+
+# Lire un fichier
+cat index.html
+
+# Rechercher un mot dans un fichier
+grep "header" index.html
+
+# Rechercher sans tenir compte des majuscules/minuscules
+grep -i "header" index.html
+
+# Rechercher dans tous les fichiers d’un dossier
+grep -r "background" assets/
+
+# Enchaîner plusieurs commandes
+cd mon-projet &amp;&amp; ls
+
+# Créer un dossier puis entrer dedans
+mkdir nouveau-projet &amp;&amp; cd nouveau-projet
+
+# Installer puis lancer le projet
+npm install &amp;&amp; npm run dev
+
+# Rechercher dans le résultat d’une commande
+ls -la | grep ".js"
+
+# Rechercher un processus
+ps aux | grep node
+
+# Nettoyer le Terminal
+clear
+
+<span class="danger-code"># DANGER : supprimer un dossier et tout son contenu
+rm -r assets-copy</span>
+</code></pre>
+      </section>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

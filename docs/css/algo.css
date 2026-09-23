@@ -1,0 +1,49 @@
+.resultat {
+  padding: 50px;
+  width: 100%;
+  background-color: #dff6dd;
+  border-radius: 22px;
+}
+.hidden-spoil {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column-reverse;
+  cursor: pointer;
+}
+
+.spoiler {
+  padding: 10px 15px;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 22px 22px 0 0;
+  font-weight: bold;
+  border: 1px solid #1e1e1e;
+}
+.hidden-spoil:hover .spoiler,
+.spoiler:focus {
+  background-color: var(--light-blue-color);
+  color: white;
+  cursor: pointer;
+  border-bottom: 1px solid var(--light-blue-color);
+}
+.exercice pre {
+  border-radius: 0 8px 8px 8px;
+}
+
+.exercice pre code {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+  overflow: auto;
+}
+.exercice pre.reveal code {
+  filter: none;
+}
+.exo-algo article {
+  padding: 30px 40px;
+}
+@media (max-width: 768px) {
+  .exo-algo article {
+    padding: 20px;
+  }
+}

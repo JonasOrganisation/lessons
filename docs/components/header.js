@@ -6,7 +6,7 @@ class SiteHeader extends HTMLElement {
 
     const base = isLocal ? "/" : "/lessons/";
 
-    const pagesBase = isLocal ? `${base}pages/` : base;
+    const pagesBase = base;
 
     this.innerHTML = `
 <header class="padding">

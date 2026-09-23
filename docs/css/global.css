@@ -1,0 +1,255 @@
+/* Re-init agents */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+button {
+  border: none;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+pre {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+/*desactivation marker des navigateur */
+summary::-webkit-details-marker {
+  display: none !important;
+}
+/* Re-init agents */
+/* ROOTS */
+:root {
+  /*color*/
+  --blue-color: #0f56e6;
+  --light-blue-color: #1d9dd9;
+  --turquoise-color: #1acdc4;
+  --white-color: #ffffff;
+  /*font*/
+  --main-font-family: Arial, system-ui, -apple-system, sans-serif;
+  --title-font-family: "Capriola", system-ui, -apple-system, sans-serif;
+}
+/* END ROOTS */
+@font-face {
+  font-display: swap;
+  font-family: "Capriola";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/Capriola/Capriola-Regular.ttf") format("woff2");
+}
+main {
+  position: relative;
+  margin-top: 70px;
+  flex-basis: 0%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  z-index: 1;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+.padding {
+  padding-inline: 50px;
+}
+body {
+  background-color: #effafd;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font-family);
+}
+/* ANCHOR */
+/* correspond à la taille de la nav + 20/30*/
+:target {
+  scroll-margin-top: 75px;
+}
+
+/* END ANCHOR */
+.main-font {
+  font-family: var(--main-font-family);
+}
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+  gap: 20px;
+}
+
+.external-link {
+  text-decoration: none;
+  color: var(--blue-color);
+  background-color: #1acdc4;
+  padding: 10px 15px;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 22px;
+  font-weight: bold;
+}
+.external-link:hover,
+.external-link:focus {
+  background-color: #0f56e6;
+  color: #1acdc4;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+article {
+  background: lab(100% 0 0);
+  border: 1px solid lab(92.115% 0.568301 1.79822);
+  border-radius: 13px;
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+article ul {
+  list-style: disc;
+  list-style-position: inside;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+article ul li::marker {
+  color: var(--blue-color);
+}
+pre {
+  background-color: #1e1e1e;
+  color: #bfbfbf;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+pre code {
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: pre;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.memo table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.memo th,
+.memo td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: left;
+  vertical-align: top;
+}
+.memo th {
+  background: #f2f2f2;
+}
+.memo td code {
+  white-space: pre-wrap;
+}
+
+/* Animation seulement si l’utilisateur n’a PAS réduit les animations */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up,
+  .fade-in,
+  .zoom-in,
+  .fade-down {
+    opacity: 0;
+    transition:
+      opacity 1.2s ease,
+      transform 1.2s ease;
+  }
+  .fade-up {
+    transform: translateY(20px);
+  }
+  .fade-down {
+    transform: translateY(-20px);
+  }
+  .fade-in {
+    transform: none;
+  }
+  .zoom-in {
+    transform: scale(0.98);
+  }
+  .fade-down.animation-is-visible,
+  .fade-up.animation-is-visible,
+  .fade-in.animation-is-visible,
+  .zoom-in.animation-is-visible,
+  section:has(.animation-visible) .fade-up,
+  section:has(.animation-visible) .fade-in,
+  section:has(.animation-visible) .zoom-in,
+  section:has(.animation-visible) .fade-down {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 768px) {
+  .padding {
+    padding-inline: 20px;
+  }
+  section {
+    margin: 25px 0;
+    gap: 10px;
+  }
+  article {
+    padding: 10px;
+    margin: 20px auto;
+  }
+  .memo table {
+    font-size: 0.9rem;
+  }
+
+  .memo th,
+  .memo td {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link rel="canonical" href="https://jonasorganisation.github.io/lessons/" />
+    <!-- SEO / SHARE -->
+    <title>Mémo Git — Commandes essentielles</title>
+    <meta
+      name="description"
+      content="Cette page est une page 'memo pour les commande Git'."
+    />
+    <meta property="og:title" content="Page terminal" />
+    <meta
+      property="og:description"
+      content="Cette page est une page 'memo pour les commande Git'."
+    />
+    <meta
+      property="og:url"
+      content="https://jonasorganisation.github.io/lessons/git.html"
+    />
+    <meta
+      property="og:image"
+      content="https://jonasorganisation.github.io/lessons/assets/images/logo.png"
+    />
+
+    <!-- END SEO / SHARE -->
+    <!-- SCRIPTS -->
+    <script src="./assets/js/hamburger.js"></script>
+    <script src="./assets/js/nav-details.js"></script>
+    <script src="./assets/js/animation.js"></script>
+    <script src="./components/header.js"></script>
+    <script src="./components/footer.js"></script>
+    <script src="./assets/js/pagefind.js"></script>
+
+    <!--END  SCRIPTS -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/git.css" />
+  </head>
+
+  <body>
+    <site-header></site-header>
+    <main class="padding main-font">
+      <section class="hero fade-down" id="hero">
+        <h1>Mémo Git — Commandes essentielles</h1>
+        <p>
+          Avec les commandes d’annulation, reset, revert, amend et checkout.
+        </p>
+      </section>
+
+      <section class="memo git" id="action">
+        <h2 id="actions">Actions</h2>
+        <article class="fade-up">
+          <h3 id="initialisation-et-etat">Initialisation et état</h3>
+          <table>
+            <tbody>
+              <tr class="fade-in">
+                <th>Commande</th>
+                <th>Description</th>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git init</code></td>
+                <td>Initialiser un dépôt.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git clone &lt;url&gt;</code></td>
+                <td>Cloner un dépôt distant.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git status</code></td>
+                <td>Voir l’état du dépôt.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git log --oneline</code></td>
+                <td>Voir l’historique compact.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git log --oneline --decorate --graph --all</code></td>
+                <td>Voir l’historique graphique.</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="fade-up">
+          <h3 id="branches">Branches</h3>
+          <table>
+            <tbody>
+              <tr class="zoom-in">
+                <th>Commande</th>
+                <th>Description</th>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git branch</code></td>
+                <td>Lister les branches locales.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git branch -a</code></td>
+                <td>Lister branches locales et distantes.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git branch -vv</code></td>
+                <td>Voir les branches suivies.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git switch main</code></td>
+                <td>Changer de branche.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git switch -c feature/xxx</code></td>
+                <td>Créer une branche et basculer dessus.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git branch -m nouveau-nom</code></td>
+                <td>Renommer la branche courante.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git branch -d branche</code></td>
+                <td>Supprimer une branche locale fusionnée.</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="fade-up">
+          <h3 id="modifications-et-commits">Modifications et commits</h3>
+          <table>
+            <tbody>
+              <tr class="fade-in">
+                <th>Commande</th>
+                <th>Description</th>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git diff</code></td>
+                <td>Voir les modifications non indexées.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git diff --staged</code></td>
+                <td>Voir ce qui sera commité.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git add fichier</code></td>
+                <td>Ajouter un fichier au staging.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git add -A</code></td>
+                <td>Ajouter toutes les modifications.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git commit -m "Message"</code></td>
+                <td>Créer un commit.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git restore --staged fichier</code></td>
+                <td>
+                  Retirer un fichier du staging sans perdre ses modifications.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="fade-up">
+          <h3 id="annuler-ou-corriger-des-modifications">Annuler ou corriger des modifications</h3>
+          <table>
+            <tbody>
+              <tr class="zoom-in">
+                <th>Commande</th>
+                <th>Effet</th>
+                <th>Usage</th>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git restore fichier</code></td>
+                <td>Annule les modifications locales non indexées.</td>
+                <td>Revenir au dernier état Git d’un fichier.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git checkout -- fichier</code></td>
+                <td>
+                  Ancienne syntaxe pour annuler les modifications locales d’un
+                  fichier.
+                </td>
+                <td>Ancien équivalent de <code>git restore fichier</code>.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git reset HEAD fichier</code></td>
+                <td>
+                  Retire un fichier du staging, conserve les modifications
+                  locales.
+                </td>
+                <td>Ancienne manière de “unstage”.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git reset --soft HEAD~1</code></td>
+                <td>
+                  Annule le dernier commit mais garde les modifications dans le
+                  staging.
+                </td>
+                <td>Refaire immédiatement le dernier commit.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git reset HEAD~1</code></td>
+                <td>
+                  Annule le dernier commit et garde les modifications hors
+                  staging.
+                </td>
+                <td>Retravailler les fichiers avant de recommitter.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git reset --hard HEAD~1</code></td>
+                <td>
+                  Annule le dernier commit et supprime aussi les modifications
+                  locales.
+                </td>
+                <td>À utiliser seulement si tu veux jeter les changements.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git revert &lt;SHA&gt;</code></td>
+                <td>
+                  Crée un nouveau commit qui annule les effets d’un ancien
+                  commit.
+                </td>
+                <td>
+                  Recommandé pour annuler un commit déjà poussé sur
+                  GitHub/GitLab.
+                </td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git commit --amend -m "Nouveau message"</code></td>
+                <td>Modifie le message du dernier commit.</td>
+                <td>Corriger un message avant le push.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td>
+                  <code>git add fichier</code><br /><code
+                    >git commit --amend</code
+                  >
+                </td>
+                <td>Ajoute un fichier oublié au dernier commit.</td>
+                <td>À faire surtout avant le push.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git checkout &lt;SHA&gt;</code></td>
+                <td>Se placer temporairement sur un ancien commit.</td>
+                <td>
+                  Consulter/tester une ancienne version. Retour :
+                  <code>git switch main</code>.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="note">
+            <strong>Règle simple :</strong><br /><br />
+            Modification locale à annuler → <code>git restore</code><br /><br />
+            Dernier commit local à corriger → <code>git commit --amend</code> ou
+            <code>git reset</code><br /><br />
+            Commit déjà poussé à annuler → <code>git revert</code><br /><br />
+            Voir un ancien commit → <code>git checkout &lt;SHA&gt;</code>
+          </div>
+          <div class="danger">
+            <strong>Attention :</strong> <code>git reset --hard</code> peut
+            supprimer des modifications locales. Évite-le si tu n’es pas certain
+            de vouloir les perdre.
+          </div>
+        </article>
+        <article class="fade-up">
+          <h3 id="depot-distant">Dépôt distant</h3>
+          <table>
+            <tbody>
+              <tr class="fade-in">
+                <th>Commande</th>
+                <th>Description</th>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git remote -v</code></td>
+                <td>Voir les dépôts distants.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git fetch origin</code></td>
+                <td>
+                  Récupérer les nouveautés sans modifier les fichiers locaux.
+                </td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git pull</code></td>
+                <td>Récupérer et intégrer les nouveautés.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git push</code></td>
+                <td>Envoyer les commits.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git push -u origin branche</code></td>
+                <td>Premier push d’une branche + suivi distant.</td>
+              </tr>
+              <tr class="fade-in">
+                <td><code>git push origin --delete branche</code></td>
+                <td>Supprimer une branche distante.</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="fade-up">
+          <h3 id="fusion-et-conflits">Fusion et conflits</h3>
+          <table>
+            <tbody>
+              <tr class="zoom-in">
+                <th>Commande</th>
+                <th>Description</th>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git merge origin/main</code></td>
+                <td>Fusionner origin/main dans la branche courante.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git status</code></td>
+                <td>Voir les fichiers en conflit.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git add fichier</code></td>
+                <td>Marquer un conflit comme résolu.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git commit</code></td>
+                <td>Terminer le merge.</td>
+              </tr>
+              <tr class="zoom-in">
+                <td><code>git merge --abort</code></td>
+                <td>Annuler un merge en cours.</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="fade-up">
+          <h3 id="github-flow">GitHub Flow</h3>
+          <ol>
+            <li><code>git switch main</code></li>
+            <li><code>git pull</code></li>
+            <li><code>git switch -c feature/ma-feature</code></li>
+            <li>Modifier les fichiers</li>
+            <li><code>git status</code></li>
+            <li><code>git diff</code></li>
+            <li><code>git add -A</code></li>
+            <li><code>git diff --staged</code></li>
+            <li><code>git commit -m "Description claire"</code></li>
+            <li><code>git push -u origin feature/ma-feature</code></li>
+            <li>Créer la Pull Request</li>
+            <li>Fusionner la Pull Request</li>
+            <li><code>git switch main</code></li>
+            <li><code>git pull</code></li>
+            <li><code>git branch -d feature/ma-feature</code></li>
+            <li><code>git push origin --delete feature/ma-feature</code></li>
+          </ol>
+        </article>
+        <article class="fade-up">
+          <h3 id="raccourcis-git-bash">Raccourcis Git Bash</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>Raccourci</th>
+                <th>Effet</th>
+              </tr>
+              <tr>
+                <td><code>Ctrl + C</code></td>
+                <td>Annuler la commande en cours.</td>
+              </tr>
+              <tr>
+                <td><code>Ctrl + U</code></td>
+                <td>Effacer la ligne en cours.</td>
+              </tr>
+              <tr>
+                <td><code>Ctrl + L</code></td>
+                <td>Nettoyer l’écran.</td>
+              </tr>
+              <tr>
+                <td><code>↑</code></td>
+                <td>Rappeler la commande précédente.</td>
+              </tr>
+              <tr>
+                <td><code>Tab</code></td>
+                <td>Compléter un chemin.</td>
+              </tr>
+              <tr>
+                <td><code>code .</code></td>
+                <td>Ouvrir le dossier courant dans VS Code.</td>
+              </tr>
+              <tr>
+                <td><code>exit</code></td>
+                <td>Fermer Git Bash.</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

@@ -8,8 +8,9 @@
   "main": "index.js",
   "scripts": {
     "anchors": "node assets/js/add-heading-ids.js",
-    "pagefind": "pagefind --site .",
-    "search": "npm run anchors && npm run pagefind"
+    "build": "node assets/js/build.js",
+    "pagefind": "pagefind --site docs",
+    "build:prod": "npm run anchors && npm run build && npm run pagefind"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link rel="canonical" href="https://jonasorganisation.github.io/lessons/" />
+    <!-- SEO / SHARE -->
+    <title>Accueil</title>
+    <meta
+      name="description"
+      content="Cette page est la page d'accueil de mon site web."
+    />
+    <meta property="og:title" content="Acueil" />
+    <meta
+      property="og:description"
+      content="Cette page est la page d'accueil de mon site web."
+    />
+    <meta
+      property="og:url"
+      content="https://jonasorganisation.github.io/lessons/"
+    />
+    <meta
+      property="og:image"
+      content="https://jonasorganisation.github.io/lessons/assets/images/logo.png"
+    />
+
+    <!-- END SEO / SHARE -->
+    <!-- SCRIPTS -->
+    <script src="./assets/js/hamburger.js"></script>
+    <script src="./assets/js/nav-details.js"></script>
+    <script src="./assets/js/animation.js"></script>
+    <script src="./components/header.js"></script>
+    <script src="./components/footer.js"></script>
+    <script src="./assets/js/pagefind.js"></script>
+    <!--END  SCRIPTS -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <site-header></site-header>
+    <main class="padding main-font fade-down">
+      <section class="hero">
+        <h1>Bienvenue sur mon site Memo</h1>
+        <p>Recueil des commandes et notes des cours de "préparation"</p>
+        <a
+          href="https://planning.fromphacotohero.fr/preparation"
+          target="_blank"
+          class="external-link"
+          >En savoir plus</a
+        >
+      </section>
+      <section class="summer-journey">
+        <h2 id="le-parcours-de-l-ete">Le parcours de l'été</h2>
+
+        <article class="fade-down">
+          <div class="presentation">
+            <h3 id="le-terminal">Le Terminal</h3>
+            <span>~6h</span>
+          </div>
+
+          <p>
+            Tout ce que tu feras en développement — Git, Node, Docker — passe
+            par le Terminal. Le clavier est dix fois plus rapide que la souris.
+          </p>
+
+          <ul>
+            <li>C'est quoi un shell — anatomie d'une commande</li>
+            <li>
+              Naviguer : pwd, ls, cd · chemins absolus vs relatifs · la touche
+              Tab
+            </li>
+            <li>
+              Manipuler : mkdir, touch, cp, mv, rm — et pourquoi rm ne pardonne
+              pas
+            </li>
+            <li>Lire et chercher : cat, less, grep</li>
+            <li>
+              Confort de pilote : historique, raccourcis, enchaîner avec
+              &amp;&amp;
+            </li>
+          </ul>
+
+          <div>
+            <strong>Livrable</strong> — L'arborescence de ta future page perso
+            créée entièrement au clavier + ta cheatsheet des 15 commandes que tu
+            utilises vraiment
+          </div>
+
+          <a
+            href="https://www.notion.so/37d2ae802e29814ea580e35be5867d52"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="external-link"
+          >
+            <span>Le Terminal</span>
+          </a>
+        </article>
+
+        <article class="fade-down">
+          <div class="presentation">
+            <h3 id="pseudo-code-amp-raisonnement">Pseudo-code &amp; raisonnement</h3>
+            <span>~4h</span>
+          </div>
+
+          <p>
+            Le code n'est que la traduction d'une pensée claire. Décomposer un
+            problème en étapes — ça s'entraîne sans ordinateur, un carnet
+            suffit.
+          </p>
+
+          <ul>
+            <li>
+              Décomposer : un problème → des étapes ordonnées — la recette de
+              cuisine comme premier algorithme
+            </li>
+            <li>
+              Les briques logiques : SI/SINON, TANT QUE, POUR CHAQUE — en
+              français, sans syntaxe
+            </li>
+            <li>
+              Variables et états : suivre ce que « la machine » retient, ligne
+              par ligne, à la main
+            </li>
+            <li>
+              Katas papier : plus grand nombre d'une liste, compter les
+              voyelles, mot le plus long
+            </li>
+            <li>
+              Relecture croisée : ton algorithme lu par quelqu'un d'autre — s'il
+              bute, c'est l'algo qui manque de clarté
+            </li>
+          </ul>
+
+          <div>
+            <strong>Livrable</strong> — 5 mini-algorithmes écrits en pseudo-code
+            (carnet ou fichier texte), dont au moins un relu et compris par
+            quelqu'un d'autre
+          </div>
+
+          <a
+            href="https://www.notion.so/37d2ae802e2981d3b307f125a652d837"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="external-link"
+          >
+            <span>Cours Pseudo-code (Notion)</span>
+          </a>
+        </article>
+
+        <article class="fade-down">
+          <div class="presentation">
+            <h3 id="html">HTML</h3>
+            <span>~10h</span>
+          </div>
+
+          <p>
+            Une page web est un document structuré, pas un dessin. HTML dit ce
+            que les choses sont — le style viendra après.
+          </p>
+
+          <ul>
+            <li>Une page = un document : doctype, head, body</li>
+            <li>
+              Le texte et les liens : titres, paragraphes, listes, &lt;a
+              href&gt;
+            </li>
+            <li>
+              La sémantique : header, nav, main, section, footer — pourquoi div
+              partout = page illisible
+            </li>
+            <li>Images et médias : img, alt obligatoire, poids des fichiers</li>
+            <li>
+              Formulaires en découverte — les reconnaître, on les creusera plus
+              tard
+            </li>
+            <li>Valider : zéro erreur au validateur W3C</li>
+          </ul>
+
+          <div>
+            <strong>Livrable</strong> — Ta page perso : structure sémantique
+            complète (header, main, footer), zéro erreur au validateur W3C
+          </div>
+
+          <a
+            href="https://www.notion.so/37d2ae802e29819ea479d108347e2168"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="external-link"
+          >
+            <span>HTML</span>
+          </a>
+        </article>
+
+        <article class="fade-down">
+          <div class="presentation">
+            <h3 id="css">CSS</h3>
+            <span>~12h</span>
+          </div>
+
+          <p>
+            Facile à commencer, diabolique à maîtriser — mais avec le box model
+            et Flexbox, tu construis déjà des pages propres.
+          </p>
+
+          <ul>
+            <li>
+              Sélecteurs et cascade : balise, classe, id — qui gagne et pourquoi
+            </li>
+            <li>
+              Le box model : content, padding, border, margin · box-sizing
+            </li>
+            <li>
+              Couleurs et typographie : contraste, Google Fonts, line-height
+            </li>
+            <li>
+              Flexbox : justify-content, align-items, gap — et Flexbox Froggy
+              pour s'entraîner
+            </li>
+            <li>
+              Responsive : media queries, mobile-first, tester sur son propre
+              téléphone
+            </li>
+            <li>Grid en découverte — reconnaître, pas maîtriser</li>
+          </ul>
+
+          <div>
+            <strong>Livrable</strong> — Ta page perso stylée et responsive :
+            lisible sur ordinateur ET sur ton téléphone
+          </div>
+
+          <a
+            href="https://www.notion.so/37d2ae802e298139beb8d8c5573e31c9"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="external-link"
+          >
+            CSS
+          </a>
+        </article>
+        <article class="fade-down">
+          <div class="presentation">
+            <h3 id="git-amp-github">Git &amp; GitHub</h3>
+            <span>~4h</span>
+          </div>
+
+          <p>
+            Ton code ne doit pas vivre que sur ton disque dur. Git le sauvegarde
+            à chaque étape, et GitHub Pages te permet de mettre ta page perso en
+            ligne, pour de vrai.
+          </p>
+
+          <ul>
+            <li>
+              Git local — photographier ton code (commits) et voyager dans son
+              historique
+            </li>
+            <li>
+              Les branches — expérimenter sans jamais casser ce qui marche
+            </li>
+            <li>GitHub — envoyer ton code sur Internet</li>
+            <li>Collaborer — Pull Requests et commits propres</li>
+            <li>GitHub Pages — déployer ta page perso, pour de vrai</li>
+          </ul>
+
+          <div>
+            <strong>Livrable</strong> — Ta page perso versionnée, déployée sur
+            GitHub Pages, avec une amélioration passée par une Pull Request
+            reviewée
+          </div>
+
+          <a
+            href="https://www.notion.so/3732ae802e298081a206e7f550efe9d6"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="external-link"
+          >
+            Git &amp; GitHub (Notion)
+          </a>
+        </article>
+
+        <article class="fade-down">
+          <div class="presentation">
+            <h3 id="algorithmie-en-javascript">Algorithmie en JavaScript</h3>
+            <span>~3h30</span>
+          </div>
+
+          <p>
+            Le pont entre le pseudo-code et le vrai code : traduire ton
+            raisonnement en JavaScript qui tourne, pour de vrai.
+          </p>
+
+          <ul>
+            <li>
+              Du pseudo-code au vrai code — traduire SI/SINON, TANT QUE, POUR
+              CHAQUE
+            </li>
+            <li>Fonctions : une responsabilité, un nom</li>
+            <li>Boucles et tableaux : le rappel express</li>
+            <li>Tracer avec console.log — la table de suivi automatique</li>
+          </ul>
+
+          <div>
+            <strong>Livrable</strong> — Le palindrome codé en JavaScript, testé
+            avec au moins 5 mots
+          </div>
+
+          <a
+            href="https://www.notion.so/39d2ae802e298186b53ff84d1bd3878c"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="external-link"
+          >
+            <span>Algorithmie en JavaScript (Notion)</span>
+          </a>
+        </article>
+      </section>
+      <section class="foundations zoom-in">
+        <h2 id="j-ai-les-fondations-si">J'ai les fondations si…</h2>
+
+        <ul>
+          <li>
+            ✓ Je navigue dans mes dossiers au clavier, sans toucher la souris
+          </li>
+          <li>
+            ✓ Je décomposes un problème en étapes écrites avant de chercher la
+            solution
+          </li>
+          <li>✓ Je crée une page HTML valide avec header, main et footer</li>
+          <li>✓ Je explique la différence entre une classe et un id en CSS</li>
+          <li>✓ Ma page perso s'affiche correctement sur mon téléphone</li>
+          <li>
+            ✓ Je ai lu un message d'erreur en entier avant de demander de l'aide
+          </li>
+        </ul>
+      </section>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+.foundations ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.presentation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.presentation span {
+  font-size: 0.9rem;
+  color: var(--blue-color);
+  font-weight: bold;
+  font-family: var(--blue-color);
+}
+
+@media (max-width: 768px) {
+}
