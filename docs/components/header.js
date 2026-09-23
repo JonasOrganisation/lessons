@@ -3,7 +3,7 @@ class SiteHeader extends HTMLElement {
     const isLocal =
       window.location.hostname === "127.0.0.1" ||
       window.location.hostname === "localhost";
-
+    const pagefindBase = isLocal ? "/pagefind/" : "/lessons/pagefind/";
     const base = isLocal ? "/" : "/lessons/";
 
     const pagesBase = base;
@@ -18,6 +18,7 @@ class SiteHeader extends HTMLElement {
     <pagefind-searchbox
       placeholder="Rechercher..."
       show-sub-results
+      bundle-path="${pagefindBase}"
     ></pagefind-searchbox>
 
     <nav id="menu-principal">
