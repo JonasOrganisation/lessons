@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
     <link rel="canonical" href="https://jonasorganisation.github.io/lessons/" />
     <!-- SEO / SHARE -->
     <title>Mini-algorithmes</title>
@@ -27,17 +27,20 @@
 
     <!-- END SEO / SHARE -->
     <!-- SCRIPTS -->
-    <script src="./assets/js/hamburger.js"></script>
-    <script src="./assets/js/nav-details.js"></script>
-    <script src="./assets/js/animation.js"></script>
-    <script src="./components/header.js"></script>
-    <script src="./components/footer.js"></script>
+    <script src="../assets/js/hamburger.js"></script>
+    <script src="../assets/js/nav-details.js"></script>
+    <script src="../assets/js/animation.js"></script>
+    <script src="../assets/js/pagefind.js"></script>
+
+    <!-- components -->
+    <script src="../components/header.js"></script>
+    <script src="../components/footer.js"></script>
 
     <!--END  SCRIPTS -->
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/algo.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/algo.css" />
   </head>
 
   <body>
@@ -48,10 +51,10 @@
         <p>Recueil des commandes et test des mini-algorithmes</p>
       </section>
       <section class="memo" id="table">
-        <h2>Mémo — Manipuler les tableaux en JavaScript</h2>
+        <h2 id="memo-manipuler-les-tableaux-en-javascript">Mémo — Manipuler les tableaux en JavaScript</h2>
 
         <article class="fade-up">
-          <h3>Créer un tableau</h3>
+          <h3 id="creer-un-tableau">Créer un tableau</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane", "orange"];
@@ -59,7 +62,7 @@ const fruits = ["pomme", "banane", "orange"];
         </article>
 
         <article class="fade-up">
-          <h3>Transformer une chaîne de caractères en tableau — split()</h3>
+          <h3 id="transformer-une-chaine-de-caracteres-en-tableau-split">Transformer une chaîne de caractères en tableau — split()</h3>
 
           <pre><code>
 const phrase = "bonjour tout le monde";
@@ -75,7 +78,7 @@ console.log(mots);
         </article>
 
         <article class="fade-up">
-          <h3>Transformer un tableau en texte — join()</h3>
+          <h3 id="transformer-un-tableau-en-texte-join">Transformer un tableau en texte — join()</h3>
 
           <pre><code>
 const mots = ["bonjour", "tout", "le", "monde"];
@@ -89,7 +92,7 @@ console.log(phrase);
         </article>
 
         <article class="fade-up">
-          <h3>Ajouter un élément à la fin — push()</h3>
+          <h3 id="ajouter-un-element-a-la-fin-push">Ajouter un élément à la fin — push()</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane"];
@@ -103,7 +106,7 @@ console.log(fruits);
         </article>
 
         <article class="fade-up">
-          <h3>Supprimer le dernier élément — pop()</h3>
+          <h3 id="supprimer-le-dernier-element-pop">Supprimer le dernier élément — pop()</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane", "orange"];
@@ -117,7 +120,7 @@ console.log(fruits);
         </article>
 
         <article class="fade-up">
-          <h3>Ajouter un élément au début — unshift()</h3>
+          <h3 id="ajouter-un-element-au-debut-unshift">Ajouter un élément au début — unshift()</h3>
 
           <pre><code>
 const fruits = ["banane", "orange"];
@@ -131,7 +134,7 @@ console.log(fruits);
         </article>
 
         <article class="fade-up">
-          <h3>Supprimer le premier élément — shift()</h3>
+          <h3 id="supprimer-le-premier-element-shift">Supprimer le premier élément — shift()</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane", "orange"];
@@ -145,7 +148,7 @@ console.log(fruits);
         </article>
 
         <article class="fade-up">
-          <h3>Connaître le nombre d'éléments — length</h3>
+          <h3 id="connaitre-le-nombre-d-elements-length">Connaître le nombre d'éléments — length</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane", "orange"];
@@ -157,7 +160,7 @@ console.log(fruits.length);
         </article>
 
         <article class="fade-up">
-          <h3>Récupérer un élément</h3>
+          <h3 id="recuperer-un-element">Récupérer un élément</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane", "orange"];
@@ -173,7 +176,7 @@ console.log(fruits[1]);
         </article>
 
         <article class="fade-up">
-          <h3>Parcourir un tableau — for...of</h3>
+          <h3 id="parcourir-un-tableau-for-of">Parcourir un tableau — for...of</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane", "orange"];
@@ -185,7 +188,7 @@ for (const fruit of fruits) {
         </article>
 
         <article class="fade-up">
-          <h3>Vérifier si une valeur existe — includes()</h3>
+          <h3 id="verifier-si-une-valeur-existe-includes">Vérifier si une valeur existe — includes()</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane", "orange"];
@@ -199,7 +202,7 @@ console.log(fruits.includes("fraise"));
         </article>
 
         <article class="fade-up">
-          <h3>Trouver la position d'un élément — indexOf()</h3>
+          <h3 id="trouver-la-position-d-un-element-indexof">Trouver la position d'un élément — indexOf()</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane", "orange"];
@@ -211,7 +214,7 @@ console.log(fruits.indexOf("banane"));
         </article>
 
         <article class="fade-up">
-          <h3>Extraire une partie du tableau — slice()</h3>
+          <h3 id="extraire-une-partie-du-tableau-slice">Extraire une partie du tableau — slice()</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane", "orange", "fraise"];
@@ -225,7 +228,7 @@ console.log(selection);
         </article>
 
         <article class="fade-up">
-          <h3>Supprimer ou ajouter des éléments — splice()</h3>
+          <h3 id="supprimer-ou-ajouter-des-elements-splice">Supprimer ou ajouter des éléments — splice()</h3>
 
           <pre><code>
 const fruits = ["pomme", "banane", "orange"];
@@ -245,7 +248,7 @@ console.log(fruits);
         </article>
 
         <article class="fade-up">
-          <h3>Créer un nouveau tableau avec map()</h3>
+          <h3 id="creer-un-nouveau-tableau-avec-map">Créer un nouveau tableau avec map()</h3>
 
           <pre><code>
 const nombres = [1, 2, 3];
@@ -261,7 +264,7 @@ console.log(doubles);
         </article>
 
         <article class="fade-up">
-          <h3>Filtrer un tableau — filter()</h3>
+          <h3 id="filtrer-un-tableau-filter">Filtrer un tableau — filter()</h3>
 
           <pre><code>
 const nombres = [1, 2, 3, 4, 5];
@@ -277,7 +280,7 @@ console.log(grands);
         </article>
 
         <article class="fade-up">
-          <h3>Trouver un élément — find()</h3>
+          <h3 id="trouver-un-element-find">Trouver un élément — find()</h3>
 
           <pre><code>
 const nombres = [2, 5, 8, 12];
@@ -294,7 +297,7 @@ console.log(resultat);
       </section>
       <section class="exo-algo fade-in" id="exemples">
         <article class="exercice exercice-voyelles">
-          <h2>Rechercher les voyelles</h2>
+          <h2 id="rechercher-les-voyelles">Rechercher les voyelles</h2>
 
           <label>
             Entrez un mot :
@@ -396,7 +399,7 @@ function searchVoyelle(mot) {
         </article>
 
         <article class="exercice exercice-longueur zoom-in">
-          <h2>Trouver le mot le plus long</h2>
+          <h2 id="trouver-le-mot-le-plus-long">Trouver le mot le plus long</h2>
 
           <label>
             Entrez une phrase :

@@ -1,48 +1,62 @@
 class SiteHeader extends HTMLElement {
   connectedCallback() {
+    const isLocal =
+      window.location.hostname === "127.0.0.1" ||
+      window.location.hostname === "localhost";
+
+    const base = isLocal ? "/" : "/lessons/";
+
     this.innerHTML = `
 <header class="padding">
-  <a class="logo" href="./index.html">
-    <img src="./assets/images/logo.png" alt="Logo" />
+  <a class="logo" href="${base}index.html">
+    <img src="${base}assets/images/logo.png" alt="Logo" />
   </a>
 
   <div class="header-wrapper">
-      <nav>
-        <ul>
-          <li>
-            <a href="./git.html">Git</a>
-          </li>
+    <pagefind-searchbox
+      placeholder="Rechercher..."
+      show-sub-results
+    ></pagefind-searchbox>
 
-          <li>
-            <details name="nav-menu">
-              <summary>Terminal</summary>
+    <nav>
+      <ul>
+        <li>
+          <a href="${base}pages/git.html">Git</a>
+        </li>
 
-              <ul class="nav-subitem">
-                <li>
-                  <a href="./terminal.html#hero">Introduction</a>
-                </li>
-                <li>
-                  <a href="./terminal.html#exemples">Actions</a>
-                </li>
-              </ul>
-            </details>
-          </li>
+        <li>
+          <details name="nav-menu">
+            <summary>Terminal</summary>
 
-          <li>
-            <details name="nav-menu">
-              <summary>Mini-algorithmes</summary>
+            <ul class="nav-subitem">
+              <li>
+                <a href="${base}pages/terminal.html#hero">Introduction</a>
+              </li>
+              <li>
+                <a href="${base}pages/terminal.html#exemples">Actions</a>
+              </li>
+            </ul>
+          </details>
+        </li>
 
-              <ul class="nav-subitem">
-                <li>
-                  <a href="./algo.html#hero">Introduction</a>
-                </li>
-                <li>
-                  <a href="./algo.html#exemples">Exemples</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-        </ul>
+        <li>
+          <details name="nav-menu">
+            <summary>Mini-algorithmes</summary>
+
+            <ul class="nav-subitem">
+              <li>
+                <a href="${base}pages/algo.html#hero">Introduction</a>
+              </li>
+              <li>
+                <a href="${base}pages/algo.html#exemples">Exemples</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <a href="${base}pages/search.html">Recherche</a>
+        </li>
+      </ul>
     </nav>
   </div>
 
