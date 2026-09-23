@@ -29,6 +29,7 @@
     <!-- SCRIPTS -->
     <script src="./assets/js/hamburger.js"></script>
     <script src="./assets/js/nav-details.js"></script>
+    <script src="./assets/js/animation.js"></script>
     <script src="./components/header.js"></script>
     <script src="./components/footer.js"></script>
     <!--END  SCRIPTS -->
@@ -41,7 +42,7 @@
   <body>
     <site-header></site-header>
     <main class="padding main-font">
-      <section class="hero" id="hero">
+      <section class="hero fade-down" id="hero">
         <h1>Mémo - Commandes Terminal</h1>
         <p>Raccourcis essentiels et exemples pratiques</p>
       </section>
@@ -50,181 +51,181 @@
         <h2>Actions</h2>
         <table>
           <thead>
-            <tr>
+            <tr class="fade-in">
               <th>Action</th>
               <th>Commande</th>
             </tr>
           </thead>
 
           <tbody>
-            <tr>
+            <tr class="fade-in">
               <td>Savoir où je suis</td>
               <td><code>pwd</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Lister les fichiers</td>
               <td><code>ls</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Lister avec détails</td>
               <td><code>ls -l</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Voir les fichiers cachés</td>
               <td><code>ls -a</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Détails + fichiers cachés</td>
               <td><code>ls -la</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Entrer dans un dossier</td>
               <td><code>cd dossier</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Revenir au dossier parent</td>
               <td><code>cd ..</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Revenir au dossier personnel</td>
               <td><code>cd ~</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Aller à la racine</td>
               <td><code>cd /</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Créer un dossier</td>
               <td><code>mkdir dossier</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Créer plusieurs dossiers</td>
               <td><code>mkdir dossier1 dossier2</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Créer une arborescence</td>
               <td><code>mkdir -p dossier/sous-dossier</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Créer un fichier</td>
               <td><code>touch fichier.txt</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Copier un fichier</td>
               <td><code>cp fichier.txt copie.txt</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Copier un dossier</td>
               <td><code>cp -r dossier copie-dossier</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Déplacer un fichier</td>
               <td><code>mv fichier.txt dossier/</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Renommer un fichier</td>
               <td><code>mv ancien.txt nouveau.txt</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Supprimer un fichier</td>
               <td><code>rm fichier.txt</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Lire un fichier</td>
               <td><code>cat fichier.txt</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Lire progressivement</td>
               <td><code>less fichier.txt</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Rechercher dans un fichier</td>
               <td><code>grep "texte" fichier.txt</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Recherche sans casse</td>
               <td><code>grep -i "texte" fichier.txt</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Recherche récursive</td>
               <td><code>grep -r "texte" dossier/</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Enchaîner des commandes</td>
               <td><code>commande1 &amp;&amp; commande2</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Filtrer la sortie d’une commande</td>
               <td><code>commande | grep "texte"</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Nettoyer le Terminal</td>
               <td><code>clear</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Voir l’historique</td>
               <td><code>history</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Arrêter une commande</td>
               <td><code>Ctrl + C</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Nettoyer l’écran</td>
               <td><code>Ctrl + L</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Commande précédente</td>
               <td><code>↑</code></td>
             </tr>
 
-            <tr>
+            <tr class="fade-in">
               <td>Commande suivante</td>
               <td><code>↓</code></td>
             </tr>
-            <tr class="red-flag">
+            <tr class="red-flag zoom-in">
               <td>⚠ Supprimer un dossier - ATTENTION</td>
               <td><code>rm -r dossier</code></td>
             </tr>
           </tbody>
         </table>
-        <p class="warning">
+        <p class="warning zoom-in">
           ⚠ <code>rm -r</code> supprime un dossier et tout son contenu sans
           passer par la corbeille.
         </p>
       </section>
-      <section class="memo terminal" id="exemples">
+      <section class="memo terminal fade-down" id="exemples">
         <h2>Exemples</h2>
-        <pre><code># Voir où je suis
+        <pre class="zoom-in"><code># Voir où je suis
 pwd
 
 # Voir tous les fichiers

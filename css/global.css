@@ -196,7 +196,41 @@ pre code {
 .memo td code {
   white-space: pre-wrap;
 }
-
+/* Animation seulement si l’utilisateur n’a PAS réduit les animations */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up,
+  .fade-in,
+  .zoom-in,
+  .fade-down {
+    opacity: 0;
+    transition:
+      opacity 1.2s ease,
+      transform 1.2s ease;
+  }
+  .fade-up {
+    transform: translateY(20px);
+  }
+  .fade-down {
+    transform: translateY(-20px);
+  }
+  .fade-in {
+    transform: none;
+  }
+  .zoom-in {
+    transform: scale(0.98);
+  }
+  .fade-down.animation-is-visible,
+  .fade-up.animation-is-visible,
+  .fade-in.animation-is-visible,
+  .zoom-in.animation-is-visible,
+  section:has(.animation-visible) .fade-up,
+  section:has(.animation-visible) .fade-in,
+  section:has(.animation-visible) .zoom-in,
+  section:has(.animation-visible) .fade-down {
+    opacity: 1;
+    transform: none;
+  }
+}
 @media (max-width: 768px) {
   .padding {
     padding-inline: 20px;
