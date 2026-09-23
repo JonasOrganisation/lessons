@@ -15,11 +15,17 @@ class SiteHeader extends HTMLElement {
   </a>
 
   <div class="header-wrapper">
-    <pagefind-searchbox
-      placeholder="Rechercher..."
-      show-sub-results
-      bundle-path="${pagefindBase}"
-    ></pagefind-searchbox>
+<pagefind-config
+  instance="header-search"
+  bundle-path="${pagefindBase}"
+  base-url="${base}"
+></pagefind-config>
+
+<pagefind-searchbox
+  instance="header-search"
+  placeholder="Rechercher..."
+  show-sub-results
+></pagefind-searchbox>
 
     <nav id="menu-principal">
       <ul>
