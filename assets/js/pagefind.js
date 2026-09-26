@@ -1,10 +1,9 @@
-const isLocal =
-  window.location.hostname === "127.0.0.1" ||
-  window.location.hostname === "localhost";
+const isGitHubPages =
+  window.location.hostname === "jonasorganisation.github.io";
 
-const base = isLocal ? "/" : "/lessons/";
+const base = isGitHubPages ? "/lessons/" : "/";
 
-const pagefindBase = isLocal ? "/pagefind/" : "/lessons/pagefind/";
+const pagefindBase = `${base}pagefind/`;
 
 // CSS
 const css = document.createElement("link");
