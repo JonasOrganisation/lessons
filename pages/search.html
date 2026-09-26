@@ -27,17 +27,11 @@
 
     <!-- END SEO / SHARE -->
     <!-- SCRIPTS -->
-    <link href="/lessons/pagefind/pagefind-component-ui.css" rel="stylesheet" />
 
-    <script
-      src="/lessons/pagefind/pagefind-component-ui.js"
-      type="module"
-    ></script>
-    <script src="../pagefind/pagefind-ui.js"></script>
-    <script src="../assets/js/hamburger.js"></script>
-    <script src="../assets/js/nav-details.js"></script>
-    <script src="../assets/js/animation.js"></script>
-    <script src="../assets/js/pagefind.js"></script>
+    <script defer src="../assets/js/hamburger.js"></script>
+    <script defer src="../assets/js/nav-details.js"></script>
+    <script defer src="../assets/js/animation.js"></script>
+    <script defer src="../assets/js/pagefind.js"></script>
 
     <!-- Components -->
     <script src="../components/header.js"></script>
@@ -57,12 +51,6 @@
         <h1>Bienvenue sur ma page recherche</h1>
       </section>
       <section class="search-page">
-        <pagefind-config
-          instance="page-search"
-          bundle-path="/lessons/pagefind/"
-          base-url="/lessons/"
-        ></pagefind-config>
-
         <pagefind-input
           instance="page-search"
           placeholder="Que recherchez-vous ?"
